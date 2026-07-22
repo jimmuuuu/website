@@ -1,7 +1,7 @@
 # Safe Place To Play — Business Cards (print-ready)
 
 Final, print-ready business card designs. Navy + gold framed style with the real
-SPTP badge, a real scannable "Scan to Donate" QR code, and the mission on the back.
+SPTP badge, a real scannable "Scan to Visit" QR code, and the mission on the back.
 
 **Size:** standard US business card, **3.5" × 2"**, landscape.
 **Resolution:** 1050 × 600 px (300 DPI — the standard printers ask for).
@@ -16,6 +16,8 @@ inside the trim zone.
 | `SPTP-Card-Trenton-Foreman-Front.png` | Front of Trent's card (Co-Founder & CEO) |
 | `SPTP-Card-Kevin-Foreman-Front.png`   | Front of Kevin's card (Co-Founder & COO) |
 | `SPTP-BusinessCard-Back-Shared.png`   | Shared back (mission) — same on both cards |
+| `Trenton_Foreman_business_card.pdf`   | Print-ready PDF (front + back) for Trent |
+| `Kevin_Foreman_business_card.pdf`     | Print-ready PDF (front + back) for Kevin |
 
 ## How to order physical cards
 
@@ -32,8 +34,8 @@ inside the trim zone.
 
 ## QR code
 
-The "Scan to Donate" QR is real and tested — it opens
-`https://safeplacetoplay.org/donate.html`. Test it with your phone on the digital
+The "Scan to Visit" QR is real and tested — it opens
+`https://safeplacetoplay.org/`. Test it with your phone on the digital
 file before ordering a big batch.
 
 ## Note
