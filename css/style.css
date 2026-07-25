@@ -379,6 +379,11 @@ a[href^="mailto:"] {
   }
   .donate-embed-card { flex: 0 1 500px; margin: 0; }
   .donate-side { flex: 0 1 400px; }
+  /* Keep the side cards compact enough that the mailing address and the QR
+     code are both on screen at the same time. */
+  .donate-side .donate-box { padding: 1.5rem; }
+  .donate-side .qr-block { padding: 1.5rem; gap: 1.25rem; }
+  .donate-side .qr-block img { width: 132px; height: 132px; }
 }
 
 /* Donor wall: stays collapsed while Donorbox reports the empty-state height,
