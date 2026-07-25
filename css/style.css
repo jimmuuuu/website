@@ -323,27 +323,61 @@ img, svg { max-width: 100%; height: auto; }
   max-width: 560px;
 }
 
+/* Long email addresses shouldn't push the page wider than the screen. */
+a[href^="mailto:"] {
+  overflow-wrap: anywhere;
+}
+
 /* ---------- Embedded Donorbox donation form ---------- */
 .donate-embed-card {
   background: #fff;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  padding: 2.5rem;
-  max-width: 640px;
+  padding: 2.5rem 2rem;
+  max-width: 660px;
   margin: 0 auto;
   border-top: 4px solid var(--gold-light);
 }
 
+/* The widget is a cross-origin iframe: it can't be restyled from here, so the
+   job of this wrapper is only to give it enough width to lay out correctly.
+   Donorbox needs ~320px; anything narrower and its form overflows. */
 .dbox-frame {
   border-radius: 10px;
-  overflow: hidden;
   border: 1px solid #e4e9f0;
-  min-height: 480px;
+  overflow: hidden;
+  min-height: 520px;
 }
 
-.dbox-frame dbox-widget {
+.dbox-frame dbox-widget,
+.dbox-frame iframe {
   display: block;
   width: 100%;
+  max-width: 100%;
+  border: 0;
+}
+
+/* On narrow phones, let the card break out of the container's side padding so
+   the widget keeps the ~320px it needs instead of being squeezed and clipped.
+   Text inside keeps its own padding so it never touches the screen edge. */
+@media (max-width: 600px) {
+  .donate-embed-card {
+    padding: 1.75rem 0;
+    margin-left: -1.25rem;
+    margin-right: -1.25rem;
+    border-radius: 0;
+  }
+  .donate-embed-card > h2,
+  .donate-embed-card > p {
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+  }
+  .dbox-frame {
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+    overflow-x: auto;
+  }
 }
 
 .choice-row {
