@@ -378,7 +378,7 @@ a[href^="mailto:"] {
     justify-content: center;
   }
   .donate-embed-card { flex: 0 1 500px; margin: 0; }
-  .donate-side { flex: 0 1 400px; position: sticky; top: 90px; }
+  .donate-side { flex: 0 1 400px; }
 }
 
 /* Donor wall: stays collapsed while Donorbox reports the empty-state height,
