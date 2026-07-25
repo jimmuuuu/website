@@ -353,6 +353,34 @@ a[href^="mailto:"] {
   margin-right: auto;
 }
 
+/* Desktop: pair the tall donation form with the mail/QR cards side-by-side so
+   the page reads as a balanced block instead of one long skinny column. On
+   mobile everything stacks in the same order as before. */
+.donate-columns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.donate-side {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 520px;
+}
+
+@media (min-width: 900px) {
+  .donate-columns {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .donate-embed-card { flex: 0 1 500px; margin: 0; }
+  .donate-side { flex: 0 1 400px; position: sticky; top: 90px; }
+}
+
 /* Donor wall: stays collapsed while Donorbox reports the empty-state height,
    so visitors never see the bare "0" widget. js/main.js reveals it once the
    wall actually has donations to show. */

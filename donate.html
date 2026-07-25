@@ -12,7 +12,7 @@
   <meta name="twitter:card" content="summary">
   <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-  <link rel="stylesheet" href="css/style.css?v=9">
+  <link rel="stylesheet" href="css/style.css?v=10">
   <noscript><style>.site-nav{display:flex !important} #donor-wall-wrap.collapsed{height:auto !important; overflow:visible !important}</style></noscript>
 </head>
 <body>
@@ -50,68 +50,66 @@
 
 <section class="section">
   <div class="container">
-    <div class="donate-embed-card" id="donate-form">
-      <h2 style="color:var(--navy); margin-bottom:0.5rem; text-align:center;">Make your gift</h2>
-      <p style="color:var(--text-muted); margin-bottom:1.5rem; text-align:center; max-width:34rem; margin-left:auto; margin-right:auto;">
-        Choose your amount and frequency &mdash; one-time, monthly, quarterly, or yearly.
-        Every dollar puts cameras where they're needed so kids can play safely.
-      </p>
+    <div class="donate-columns">
+      <div class="donate-embed-card" id="donate-form">
+        <h2 style="color:var(--navy); margin-bottom:0.5rem; text-align:center;">Make your gift</h2>
+        <p style="color:var(--text-muted); margin-bottom:1.5rem; text-align:center; max-width:34rem; margin-left:auto; margin-right:auto;">
+          Choose your amount and frequency &mdash; one-time, monthly, quarterly, or yearly.
+          Every dollar puts cameras where they're needed so kids can play safely.
+        </p>
 
-      <div class="dbox-frame">
-        <script type="module" src="https://donorbox.org/widgets.js" async></script>
-        <dbox-widget campaign="safe-place-to-play" type="donation_form" enable-auto-scroll="false"></dbox-widget>
+        <div class="dbox-frame">
+          <script type="module" src="https://donorbox.org/widgets.js" async></script>
+          <dbox-widget campaign="safe-place-to-play" type="donation_form" enable-auto-scroll="false"></dbox-widget>
+        </div>
+
+        <p class="fine-print" style="text-align:center; margin-top:1.25rem;">
+          Donations are processed securely through Donorbox, our donation platform. Recurring
+          gifts (monthly, quarterly, yearly) can be changed or canceled at any time. Trouble
+          with the form above? <a href="https://donorbox.org/safe-place-to-play" target="_blank" rel="noopener">Open it in a new tab</a>.
+        </p>
+
+        <p style="margin-top:0.9rem; font-size:1.1rem; font-weight:700; color:var(--navy); text-align:center;">
+          Ask your tax professional about the benefits of giving to a 501(c)(3) nonprofit.
+        </p>
       </div>
 
-      <p class="fine-print" style="text-align:center; margin-top:1.25rem;">
-        Donations are processed securely through Donorbox, our donation platform. Recurring
-        gifts (monthly, quarterly, yearly) can be changed or canceled at any time. Trouble
-        with the form above? <a href="https://donorbox.org/safe-place-to-play" target="_blank" rel="noopener">Open it in a new tab</a>.
-      </p>
+      <div class="donate-side">
+        <div class="donate-box">
+          <h2 style="color:var(--navy); margin-bottom:0.5rem;">Donate by mail</h2>
+          <p style="color:var(--text-muted); margin-bottom:1.5rem;">
+            Prefer a check or cash? We're happy to accept donations by mail. Please make checks
+            payable to <strong>Safe Place To Play</strong> and send to:
+          </p>
+          <p style="font-size:1.15rem; font-weight:700; color:var(--navy); line-height:1.6; margin-bottom:1.5rem;">
+            Safe Place To Play<br>
+            201 E Birch Ave Ste #14<br>
+            Flagstaff, AZ 86001
+          </p>
+          <p class="fine-print">
+            To receive your tax-deductible receipt, please include your email address or a
+            return address with your donation.
+          </p>
+          <p style="margin-top:0.9rem; font-size:1.1rem; font-weight:700; color:var(--navy);">
+            Questions? Email <a href="mailto:givetosafeplacetoplay@gmail.com">givetosafeplacetoplay@gmail.com</a>.
+          </p>
+        </div>
 
-      <p style="margin-top:0.9rem; font-size:1.1rem; font-weight:700; color:var(--navy); text-align:center;">
-        Ask your tax professional about the benefits of giving to a 501(c)(3) nonprofit.
-      </p>
+        <div class="qr-block">
+          <img src="images/qr-donate.svg" alt="QR code linking to the Safe Place To Play website">
+          <div>
+            <h3 style="color:var(--navy); margin-bottom:0.4rem;">Share our site</h3>
+            <p style="font-size:0.95rem;">Scanning this QR code opens our website at
+              safeplacetoplay.org. A print-ready version lives at
+              <code>images/qr-donate.png</code> for flyers, banners, and event tables.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="section alt">
-  <div class="container" style="display:flex; gap:2rem; flex-wrap:wrap; align-items:flex-start;">
-
-    <div class="donate-box" style="flex:1; min-width:300px;">
-      <h2 style="color:var(--navy); margin-bottom:0.5rem;">Donate by mail</h2>
-      <p style="color:var(--text-muted); margin-bottom:1.5rem;">
-        Prefer a check or cash? We're happy to accept donations by mail. Please make checks
-        payable to <strong>Safe Place To Play</strong> and send to:
-      </p>
-      <p style="font-size:1.15rem; font-weight:700; color:var(--navy); line-height:1.6; margin-bottom:1.5rem;">
-        Safe Place To Play<br>
-        201 E Birch Ave Ste #14<br>
-        Flagstaff, AZ 86001
-      </p>
-      <p class="fine-print">
-        To receive your tax-deductible receipt, please include your email address or a
-        return address with your donation.
-      </p>
-      <p style="margin-top:0.9rem; font-size:1.1rem; font-weight:700; color:var(--navy);">
-        Questions? Email <a href="mailto:givetosafeplacetoplay@gmail.com">givetosafeplacetoplay@gmail.com</a>.
-      </p>
-    </div>
-
-    <div class="qr-block" style="flex:1; min-width: 280px;">
-      <img src="images/qr-donate.svg" alt="QR code linking to the Safe Place To Play website">
-      <div>
-        <h3 style="color:var(--navy); margin-bottom:0.4rem;">Share our site</h3>
-        <p style="font-size:0.95rem;">Scanning this QR code opens our website at
-          safeplacetoplay.org. A print-ready version lives at
-          <code>images/qr-donate.png</code> for flyers, banners, and event tables.</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section class="section">
   <div class="container">
     <p class="eyebrow" style="text-align:center;">Thank You</p>
     <h2 class="section-title" style="text-align:center;">Donor Wall</h2>
@@ -129,7 +127,7 @@
   </div>
 </section>
 
-<section class="section alt">
+<section class="section">
   <div class="container">
     <div class="notice" style="max-width:44rem; margin:0 auto;">
       <strong>Tax-deductible giving &amp; receipts:</strong> Safe Place To Play is a
