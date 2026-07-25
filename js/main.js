@@ -88,27 +88,6 @@
   });
 })();
 
-// ---------- Donation button ----------
-// The amount and frequency are chosen on the hosted donation form (Zeffy), so
-// the button's only job is to send the visitor there.
-(function () {
-  var donateButton = document.getElementById('donate-button');
-  if (!donateButton) return;
-
-  donateButton.addEventListener('click', function () {
-    var checkout = window.SPTP_DONATION_URL;
-    if (checkout) {
-      window.location.href = checkout;
-      return;
-    }
-    alert(
-      'Thank you for supporting Safe Place To Play!\n\n' +
-      'Our secure online donation page is coming soon. In the meantime, please reach ' +
-      'out through Facebook or Instagram (links in the footer) to complete your gift.'
-    );
-  });
-})();
-
 // ---------- Submit-a-project form ----------
 // The form now POSTs to FormSubmit, which emails submissions to the SPTP inbox.
 // After a successful send, FormSubmit redirects back here with ?sent=1.

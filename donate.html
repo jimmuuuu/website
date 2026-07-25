@@ -12,7 +12,7 @@
   <meta name="twitter:card" content="summary">
   <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-  <link rel="stylesheet" href="css/style.css?v=5">
+  <link rel="stylesheet" href="css/style.css?v=6">
   <noscript><style>.site-nav{display:flex !important}</style></noscript>
 </head>
 <body>
@@ -49,27 +49,34 @@
 </section>
 
 <section class="section">
-  <div class="container" style="display:flex; gap:2rem; flex-wrap:wrap; align-items:flex-start;">
-
-    <div class="donate-box" id="donate-form" style="flex:1; min-width:300px;">
-      <h2 style="color:var(--navy); margin-bottom:0.5rem;">Make your gift</h2>
-      <p style="color:var(--text-muted); margin-bottom:1.5rem;">
-        Click below to choose your amount and frequency &mdash; one-time, monthly, quarterly,
-        or yearly &mdash; on our secure donation page. Every dollar puts cameras where they're
-        needed so kids can play safely.
+  <div class="container">
+    <div class="donate-embed-card" id="donate-form">
+      <h2 style="color:var(--navy); margin-bottom:0.5rem; text-align:center;">Make your gift</h2>
+      <p style="color:var(--text-muted); margin-bottom:1.5rem; text-align:center; max-width:34rem; margin-left:auto; margin-right:auto;">
+        Choose your amount and frequency &mdash; one-time, monthly, quarterly, or yearly.
+        Every dollar puts cameras where they're needed so kids can play safely.
       </p>
 
-      <button class="btn btn-gold" id="donate-button" style="width:100%;">Donate Now</button>
+      <div class="dbox-frame">
+        <script type="module" src="https://donorbox.org/widgets.js" async></script>
+        <dbox-widget campaign="safe-place-to-play" type="donation_form" enable-auto-scroll="true"></dbox-widget>
+      </div>
 
-      <p class="fine-print">
-        Donations are processed securely through Donorbox, our donation platform. Recurring gifts
-        (monthly, quarterly, yearly) can be changed or canceled at any time.
+      <p class="fine-print" style="text-align:center; margin-top:1.25rem;">
+        Donations are processed securely through Donorbox, our donation platform. Recurring
+        gifts (monthly, quarterly, yearly) can be changed or canceled at any time. Trouble
+        with the form above? <a href="https://donorbox.org/safe-place-to-play" target="_blank" rel="noopener">Open it in a new tab</a>.
       </p>
 
-      <p style="margin-top:0.9rem; font-size:1.1rem; font-weight:700; color:var(--navy);">
+      <p style="margin-top:0.9rem; font-size:1.1rem; font-weight:700; color:var(--navy); text-align:center;">
         Ask your tax professional about the benefits of giving to a 501(c)(3) nonprofit.
       </p>
     </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container" style="display:flex; gap:2rem; flex-wrap:wrap; align-items:flex-start;">
 
     <div class="donate-box" style="flex:1; min-width:300px;">
       <h2 style="color:var(--navy); margin-bottom:0.5rem;">Donate by mail</h2>
@@ -91,12 +98,6 @@
       </p>
     </div>
 
-  </div>
-</section>
-
-<section class="section alt">
-  <div class="container" style="display:flex; gap:2rem; flex-wrap:wrap; align-items:flex-start;">
-
     <div class="qr-block" style="flex:1; min-width: 280px;">
       <img src="images/qr-donate.svg" alt="QR code linking to the Safe Place To Play website">
       <div>
@@ -107,7 +108,12 @@
       </div>
     </div>
 
-    <div class="notice" style="flex:1; min-width: 280px;">
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="notice" style="max-width:44rem; margin:0 auto;">
       <strong>Tax-deductible giving &amp; receipts:</strong> Safe Place To Play is a
       501(c)(3) tax-exempt nonprofit organization, so your donation is tax-deductible to
       the extent allowed by law. Every donation automatically generates an emailed receipt
@@ -116,7 +122,6 @@
       individual situation. Questions about giving? Email
       <a href="mailto:givetosafeplacetoplay@gmail.com">givetosafeplacetoplay@gmail.com</a>.
     </div>
-
   </div>
 </section>
 
@@ -160,13 +165,6 @@
   </div>
 </footer>
 
-<script>
-  // ===== ACTIVATE LIVE DONATIONS =====
-  // Paste the organization's checkout link between the quotes below, then save.
-  // Works with Zeffy (e.g. "https://www.zeffy.com/donation-form/...") or
-  // Donorbox (e.g. "https://donorbox.org/sptp"). Leave empty = "coming soon" message.
-  window.SPTP_DONATION_URL = "https://donorbox.org/safe-place-to-play";
-</script>
-<script src="js/main.js?v=10"></script>
+<script src="js/main.js?v=11"></script>
 </body>
 </html>

@@ -323,6 +323,29 @@ img, svg { max-width: 100%; height: auto; }
   max-width: 560px;
 }
 
+/* ---------- Embedded Donorbox donation form ---------- */
+.donate-embed-card {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2.5rem;
+  max-width: 640px;
+  margin: 0 auto;
+  border-top: 4px solid var(--gold-light);
+}
+
+.dbox-frame {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #e4e9f0;
+  min-height: 480px;
+}
+
+.dbox-frame dbox-widget {
+  display: block;
+  width: 100%;
+}
+
 .choice-row {
   display: flex;
   flex-wrap: wrap;
