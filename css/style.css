@@ -346,6 +346,20 @@ a[href^="mailto:"] {
   border-radius: 10px;
   border: 1px solid #e4e9f0;
   overflow: hidden;
+  /* Donorbox designs its form at ~425px; letting it stretch wider on desktop
+     is what made it look off. Cap at native width and center it. */
+  max-width: 432px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Donor wall: stays collapsed while Donorbox reports the empty-state height,
+   so visitors never see the bare "0" widget. js/main.js reveals it once the
+   wall actually has donations to show. */
+#donor-wall-wrap.collapsed {
+  height: 0;
+  overflow: hidden;
+  margin: 0;
 }
 
 .dbox-frame dbox-widget,

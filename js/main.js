@@ -88,6 +88,34 @@
   });
 })();
 
+// ---------- Donor wall (donate page) ----------
+// The wall starts collapsed so visitors never see Donorbox's empty "0" state.
+// Donorbox's widget.js grows the iframe once there are donations to list; when
+// the reported height passes the empty-state size (~93px), reveal the wall and
+// drop the placeholder line.
+(function () {
+  var wrap = document.getElementById('donor-wall-wrap');
+  if (!wrap) return;
+  var iframe = wrap.querySelector('iframe');
+  var empty = document.getElementById('donor-wall-empty');
+
+  function check() {
+    var h = (iframe && iframe.offsetHeight) || 0;
+    if (h > 150) {
+      wrap.classList.remove('collapsed');
+      if (empty) empty.style.display = 'none';
+      return true;
+    }
+    return false;
+  }
+
+  var tries = 0;
+  var timer = setInterval(function () {
+    if (check() || ++tries > 60) clearInterval(timer);
+  }, 1000);
+  check();
+})();
+
 // ---------- Submit-a-project form ----------
 // The form now POSTs to FormSubmit, which emails submissions to the SPTP inbox.
 // After a successful send, FormSubmit redirects back here with ?sent=1.
