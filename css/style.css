@@ -353,6 +353,20 @@ a[href^="mailto:"] {
   margin-right: auto;
 }
 
+/* Donorbox's widget.js resizes the iframe to fit its content. If that resize
+   is slow or blocked, a short iframe would silently cut off the payment
+   buttons at the bottom of the form (scrolling is off), so hold a floor tall
+   enough to show them. Narrower screens stack taller, so they need more. */
+.dbox-frame iframe {
+  min-height: 1000px;
+}
+
+@media (max-width: 600px) {
+  .dbox-frame iframe {
+    min-height: 1250px;
+  }
+}
+
 /* Desktop: pair the tall donation form with the mail/QR cards side-by-side so
    the page reads as a balanced block instead of one long skinny column. On
    mobile everything stacks in the same order as before. */
