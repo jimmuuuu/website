@@ -55,8 +55,14 @@
         <h2 style="color:var(--navy); margin-bottom:1.25rem; text-align:center;">Make your gift</h2>
 
         <div class="dbox-frame">
-          <script type="module" src="https://donorbox.org/widgets.js" async></script>
-          <dbox-widget campaign="safe-place-to-play" type="donation_form" enable-auto-scroll="false"></dbox-widget>
+          <!-- Classic Donorbox embed: the allow="payment" grant is what lets
+               Apple Pay / Google Pay render inside the embedded form. -->
+          <script src="https://donorbox.org/widget.js" paypalExpress="true"></script>
+          <iframe src="https://donorbox.org/embed/safe-place-to-play" name="donorbox"
+            allow="payment" allowpaymentrequest="allowpaymentrequest"
+            seamless="seamless" frameborder="0" scrolling="no" height="900px" width="100%"
+            style="max-width: 500px; min-width: 250px; max-height: none !important;"
+            title="Donate to Safe Place To Play"></iframe>
         </div>
 
         <p class="fine-print" style="text-align:center; margin-top:1.25rem;">
