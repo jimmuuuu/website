@@ -358,12 +358,12 @@ a[href^="mailto:"] {
    buttons at the bottom of the form (scrolling is off), so hold a floor tall
    enough to show them. Narrower screens stack taller, so they need more. */
 .dbox-frame iframe {
-  min-height: 1000px;
+  min-height: 520px;
 }
 
 @media (max-width: 600px) {
   .dbox-frame iframe {
-    min-height: 1250px;
+    min-height: 560px;
   }
 }
 
