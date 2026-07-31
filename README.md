@@ -1,84 +1,84 @@
-# Safe Place To Play — safeplacetoplay.org / sptp.org
+# Safe Place To Play — safeplacetoplay.org
 
-Official website for **Safe Place To Play (SPTP)**, a nonprofit that installs security
-cameras in parks, playgrounds, and public spaces that don't have them — so people feel
-safe and kids can play.
+This is the website for **Safe Place To Play (SPTP)**, a nonprofit that installs
+security cameras in parks, playgrounds, and public spaces that don't have them —
+so people feel safe and kids can play.
 
-This is a pure static site (HTML/CSS/JS) — no build step, no framework, no server
-required. Open `index.html` in a browser to preview it locally.
+This guide is written for the board, not developers — it explains what's here and
+how to make simple changes yourself. No coding experience needed.
 
-## Pages
+## How this actually works (2-minute version)
 
-| File | Purpose |
+- **GitHub** (where you're reading this) stores every file that makes up the site,
+  and also hosts it — that's what makes safeplacetoplay.org show up when someone
+  types it in.
+- To change something, click a file → click the **pencil icon (✏️)** → edit the
+  text → scroll down → click the green **"Commit changes"** button. The live site
+  updates within a minute or two.
+- Every change is saved in the site's history, so nothing you do here is permanent
+  or risky — anything can be undone.
+
+## The pages
+
+| File | What it is |
 |---|---|
-| `index.html` | Home — hero, mission, what we build, donate QR code |
-| `about.html` | Mission statement + board members (CEO, COO/Senior Project Manager) |
-| `donate.html` | Donate Now — preset & custom amounts; one-time / monthly / quarterly / yearly |
-| `projects.html` | Completed/example projects + placeholder for the future project map |
+| `index.html` | Homepage |
+| `about.html` | Mission statement + board members |
+| `donate.html` | Donate page (Donorbox donation form, mail-in option, donor wall) |
+| `projects.html` | Completed / example projects |
 | `events.html` | Upcoming events |
 | `auction.html` | Sports memorabilia live auction |
-| `submit-project.html` | "Submit your project for consideration" form |
+| `submit-project.html` | "Submit a project for consideration" form |
+| `privacy.html` | Privacy policy |
 
-Shared assets: `css/style.css`, `js/main.js`, `images/` (logo, illustrations, QR codes).
+## Making simple changes
 
-### Logo files
+**Edit any text** — open the page, click the pencil ✏️, click into the text and
+type. Example: to update an event date in `events.html`, look for `TBA` and
+replace it with the real month and day.
 
-| File | Use |
+**Bold a sentence** — wrap it in `<strong>` and `</strong>`, e.g.
+`<strong>this shows up bold</strong>`.
+
+**Change a color site-wide** — open `css/style.css`. Right at the top there's a
+list of the site's colors as hex codes, like:
+```
+--navy: #122a4d;
+--gold: #d4a017;
+```
+Changing one of these updates that color everywhere it's used on the site. Pick a
+new color at [coolors.co](https://coolors.co), copy its code (starts with `#`),
+and paste it in place of the old one — just don't delete the `:` or `;`.
+
+## What's in each folder
+
+| Folder | What's in it |
 |---|---|
-| `images/logo.webp` | Site header (small, fast) |
-| `images/logo.png` | General web use (360px tall) |
-| `images/logo-full.png` | Full-resolution master — social media, print mockups |
-| `images/favicon.png` / `images/apple-touch-icon.png` | Browser tab + iOS home screen icons |
-| `images/logo.svg` | Earlier vector (drawn) version, kept as a backup |
+| `css/` | `style.css` — controls colors, fonts, and layout for the whole site |
+| `js/` | `main.js` — small bits of interactive behavior (menu, forms, donor wall) |
+| `images/` | Logo, photos, icons, QR code |
+| `print/business-cards/` | Print-ready board member business cards |
+| `.well-known/` | A technical folder Apple Pay uses to verify the domain — leave as-is |
 
-## Hosting recommendation (sptp.org)
+## Accounts this site depends on
 
-Because the site is static, hosting is cheap or free. Recommended options, best first:
+| Service | What it's for |
+|---|---|
+| **GitHub** | Hosts the website files (this repo) |
+| **Squarespace** | Owns the safeplacetoplay.org domain name |
+| **Donorbox** | Powers the donation form |
+| **Stripe / PayPal** | Process the actual card payments, connected through Donorbox |
+| **FormSubmit** | Delivers "Submit a Project" form entries to forinfosptp@gmail.com |
 
-1. **Netlify** (recommended) — free tier, connects directly to this GitHub repo and
-   auto-deploys on every push, free HTTPS, easy custom-domain setup, and **Netlify Forms**
-   can make the "Submit a Project" form work with zero backend code.
-2. **GitHub Pages** — completely free, serves straight from this repo
-   (Settings → Pages → deploy from branch). Supports custom domains with HTTPS.
-3. **Cloudflare Pages** or **Vercel** — also free and excellent; similar setup to Netlify.
+## Still outstanding
 
-**Connecting the domains:** wherever sptp.org / safeplacetoplay.org are registered
-(GoDaddy, Namecheap, Google Domains, etc.), point the DNS records (A/CNAME) at the host —
-each of the services above shows the exact records to add. Set one domain as primary and
-redirect the other to it so search engines see a single site.
-
-## Going live checklist
-
-- [ ] **Board photos** — replace `images/avatar-placeholder.svg` references in
-      `about.html` with real headshots, and fill in names/bios.
-- [ ] **Donations** — sign up with a nonprofit payment processor and connect the
-      Donate button in `js/main.js` (look for the `TODO`):
-      - **Zeffy** — 100% free for nonprofits (no platform or card fees)
-      - **Donorbox** or **Givebutter** — purpose-built donation forms, recurring gifts
-        (monthly/quarterly/yearly), embeddable directly into `donate.html`
-      - **Stripe / PayPal Giving** — more control, slightly more setup
-- [ ] **Tax receipts** — all of the processors above **automatically email each donor a
-      donation receipt** and provide year-end statements, which covers the
-      receipt/tax-deduction requirement. 501(c)(3) status CONFIRMED via IRS records
-      (ProPublica Nonprofit Explorer): Safe Place To Play, EIN 41-3568005, Flagstaff AZ,
-      ruling date 2026-03, deductibility code 1 (donations deductible). The EIN is on the
-      donate page. Get the IRS determination letter PDF from the board — it's needed for
-      Zeffy/Donorbox signup, Google Ad Grants, and Meta fundraising verification.
-- [ ] **Submit-a-Project form** — wire `submit-project.html` to a form backend so
-      submissions arrive by email: Netlify Forms (if hosting on Netlify), or
-      [Formspree](https://formspree.io) free tier (see `TODO` in `js/main.js`).
-- [ ] **Photos** — swap the SVG illustrations in `images/` for real build photos as
-      projects complete.
-- [ ] **Events & auction** — replace the TBA placeholders with real dates and lots.
-- [ ] **Project map (future)** — planned interactive map of completed project locations
-      (Google My Maps embed or Leaflet); placeholder note is on the Projects page.
+- [ ] **Event dates** — `events.html` still has `TBA` placeholders; replace with
+      real dates as they're scheduled.
 
 ## QR code
 
-`images/qr-donate.svg` (web) and `images/qr-donate.png` (print) both point to
-`https://safeplacetoplay.org/` (the website home page). If the URL changes, regenerate
-with:
-
+`images/qr-donate.svg` / `images/qr-donate.png` both point to
+`https://safeplacetoplay.org/`. To regenerate for a different link:
 ```bash
 pip install qrcode pillow
 python3 -c "import qrcode; qrcode.make('https://NEW-URL').save('images/qr-donate.png')"

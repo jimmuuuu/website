@@ -1,13 +1,9 @@
-# Safe Place To Play — Business Cards (print-ready)
+# Business Cards (print-ready)
 
-Final, print-ready business card designs. Navy + gold framed style with the real
-SPTP badge, a real scannable "Scan to Visit" QR code, and the mission on the back.
+Navy + gold cards with the SPTP badge, a working QR code, and the mission
+statement on the back.
 
-**Size:** standard US business card, **3.5" × 2"**, landscape.
-**Resolution:** 1050 × 600 px (300 DPI — the standard printers ask for).
-**Design:** these are the Gemini-designed cards with the real SPTP badge and a real
-scannable QR composited in. The navy runs full-bleed; the gold frame and text sit
-inside the trim zone.
+**Size:** standard US business card, 3.5" × 2".
 
 ## Files
 
@@ -21,24 +17,20 @@ inside the trim zone.
 
 ## How to order physical cards
 
-1. Go to a printer — **Vistaprint, GotPrint, MOO, Staples,** or a local print shop.
-2. Choose **Standard business card, 3.5" × 2", double-sided (front & back).**
-3. Upload:
-   - **Front** = the person's card (Trent's or Kevin's)
-   - **Back** = `SPTP-BusinessCard-Back-Shared.png`
-4. If it asks how to fit the image, choose **"Fill"** / **"Scale to fill"** so the
-   navy reaches all edges.
-5. If it asks about bleed, the art is already full-bleed — just confirm and check the
-   preview shows the gold frame fully inside the card.
-6. Order Trent's and Kevin's as two separate cards (same back on both).
+1. Go to a printer — Vistaprint, GotPrint, MOO, Staples, or a local print shop.
+2. Choose **standard business card, 3.5" × 2", double-sided.**
+3. Easiest: just upload the PDF (already has front + back). If uploading images
+   separately instead, use the front PNG for the front and
+   `SPTP-BusinessCard-Back-Shared.png` for the back.
+4. If asked how to fit the image, choose "Fill" so the navy background reaches
+   all the edges.
 
 ## QR code
 
-The "Scan to Visit" QR is real and tested — it opens
-`https://safeplacetoplay.org/`. Test it with your phone on the digital
-file before ordering a big batch.
+The QR code on the front opens `https://safeplacetoplay.org/`. Test it with
+your phone before ordering a big batch.
 
 ## Note
 
-No phone numbers are on the cards. If Trent and Kevin want their numbers added,
-send them and they can be dropped in.
+No phone numbers are on the cards. If Trent or Kevin want their number added,
+send it over and it can be dropped in.
