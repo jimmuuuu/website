@@ -149,7 +149,7 @@ img, svg { max-width: 100%; height: auto; }
 /* ---------- Hero ---------- */
 .hero {
   background: linear-gradient(160deg, var(--navy) 0%, var(--navy-dark) 70%);
-  color: ##ddbe0e;
+  color: ##FFFFFF;
   padding: 3.5rem 0 3rem;
 }
 
