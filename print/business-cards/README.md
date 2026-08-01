@@ -14,6 +14,12 @@ statement on the back.
 | `SPTP-BusinessCard-Back-Shared.png`   | Shared back (mission) — same on both cards |
 | `Trenton_Foreman_business_card.pdf`   | Print-ready PDF (front + back) for Trent |
 | `Kevin_Foreman_business_card.pdf`     | Print-ready PDF (front + back) for Kevin |
+| `SPTP-Card-Trent-FRONT.jpg`           | Trent's front, as JPG |
+| `SPTP-Card-Kevin-FRONT.jpg`           | Kevin's front, as JPG |
+| `SPTP-Card-BACK.jpg`                  | Shared back, as JPG |
+
+Some print sites only accept images, not PDFs — that's what the JPG
+versions are for.
 
 ## How to order physical cards
 
